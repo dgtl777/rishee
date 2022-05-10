@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 39</title>
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            background-image: linear-gradient(yellow,green);
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        h1{
+            color: green;
+        }
+        img{
+            width: 300px;
+            height: 300px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Riddle App</h1>
+        <h1 id="score">0</h1>
+    </header>
+    <h3>1. What has to be broken before you can use it?</h3>
+    <input type="text" name="" id="q1">
+    <button onclick="q1()">Submit Answer</button>
+    <button onclick="h1()">Hint</button><br><br>
+    <img id="i1" src="https://www.acouplecooks.com/wp-content/uploads/2020/12/How-to-Make-Eggs-Sunny-Side-Up-051.jpg" alt="">
+    
+</body>
+<script>
+
+    var hint = 0;
+    function h1(){
+        if(hint == 0){
+        score = score - 0.5;
+        document.getElementById("score").innerText = 
+        score;
+        document.getElementById("i1").style.display = "inline-block";
+        }
+        hint = hint + 1;
+        if(hint == 2){
+            document.getElementById("i1").style.display = "none";
+        }
+    }
+
+    var temp = false;
+    var score = 0;
+    function q1(){
+        if(temp == false){
+        var a1 = document.getElementById("q1").value;
+        if(a1.toUpperCase() == "EGG"){
+            score  = score + 1;
+            document.getElementById("score").innerText = 
+            score;
+        }
+        temp = true;
+    }
+    }
+</script>
+</html>

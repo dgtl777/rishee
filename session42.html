@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 42</title>
+    <style>
+        body{
+            width: 100vw;
+            height: 200vh;
+            background-image: linear-gradient(palegreen,green);
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        h1{
+            color: green;
+        }
+        .main{
+            width: 400px;
+            height: 400px;
+            background-color: yellow;
+            margin: auto;
+            position: sticky;
+            top: 0;
+            animation-name: main;
+            animation-duration: 8s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        @keyframes main {
+           from{
+                transform: rotate(0deg);
+           } 
+           to{
+                transform: rotate(360deg);
+           }
+        }
+        .box1{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+            top: 0;
+            left: 0;
+            animation-name: box1;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        @keyframes box1 {
+            from{
+                top: 0;
+                left: 0;
+                background-color: blue;
+                transform: rotate(0deg);
+            }
+            to{
+                top: 150px;
+                left: 150px;
+                background-color: red;
+                transform: rotate(360deg);
+            }
+        }
+        .box2{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            position: absolute;
+            top: 150px;
+            left: 150px;
+        }
+        .box3{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+            top: 0;
+            right: 0;
+            animation-name: box3;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-delay: 1s;
+        }
+        @keyframes box3 {
+            from{
+                top: 0;
+                right: 0;
+                background-color: blue;
+                transform: rotate(0deg);
+            }
+            to{
+                top: 150px;
+                right: 150px;
+                background-color: red;
+                transform: rotate(360deg);
+            }
+        }
+        .box4{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            animation-name: box4;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-delay: 2s;
+        }
+        @keyframes box4 {
+            from{
+                bottom: 0;
+                right: 0;
+                background-color: blue;
+                transform: rotate(0deg);
+            }
+            to{
+                bottom: 150px;
+                right: 150px;
+                background-color: red;
+                transform: rotate(360deg);
+                
+            }
+        }
+
+        .box5{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            animation-name: box5;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-delay: 3s;
+        }
+        @keyframes box5 {
+            from{
+                bottom: 0;
+                left: 0;
+                background-color: blue;
+                transform: rotate(0deg);
+            }
+            to{
+                bottom: 150px;
+                left: 150px;
+                background-color: red;
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Positioning Elements</h1>
+    </header>
+    <div class="main">
+        <div class="box2"></div>
+        <div class="box1"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+        <div class="box5"></div>
+    </div>
+    
+</body>
+</html>

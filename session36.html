@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 36</title>
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            background-image: linear-gradient(skyblue,slateblue);
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        h1{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Quiz App</h1>
+        <h1 id="score">0</h1>
+    </header>
+    <h3>1. Which is the tallest building in the world?</h3>
+    <label for="">Burj Khalifa</label>
+    <input type="radio" name="tall" id="" value="burj">
+    <label for="">Big Ben</label>
+    <input type="radio" name="tall" id="" value="ben"><br><br>
+    <label for="">Shanghai Tower</label>
+    <input type="radio" name="tall" id="" value="shanghai">
+    <label for="">Eiffel Tower</label>
+    <input type="radio" name="tall" id="" value="eiffel">
+    <h3>2. Who is the fastest runner in the world?</h3>
+    <label for="">Usain Bolt</label>
+    <input type="radio" name="runner" id="" value="usain">
+    <label for="">Lamont Jacobs</label>
+    <input type="radio" name="runner" id="" value="lamont"><br><br>
+    <label for="">Elaine Thompson</label>
+    <input type="radio" name="runner" id="" value="elaine">
+    <label for="">Kanakuri</label>
+    <input type="radio" name="runner" id="" value="kanakuri">
+    <h3>3. Which is the biggest planet in the solar system?</h3>
+    <label for="">Jupiter</label>
+    <input type="radio" name="planet" id="" value="jupiter">
+    <label for="">Earth</label>
+    <input type="radio" name="planet" id="" value="earth"><br><br>
+    <label for="">Sun</label>
+    <input type="radio" name="planet" id="" value="sun">
+    <label for="">Mars</label>
+    <input type="radio" name="planet" id="" value="mars">
+    <h3>4. Who is the founder of Google?</h3>
+    <label for="">Mark Zuckerberg</label>
+    <input type="radio" name="google" id="" value="mark">
+    <label for="">Bill Gates</label>
+    <input type="radio" name="google" id="" value="bill"><br><br>
+    <label for="">Larry Page</label>
+    <input type="radio" name="google" id="" value="larry">
+    <label for="">Elon Musk</label>
+    <input type="radio" name="google" id="" value="elon">
+    <h3>5. Who won the ICC World Cup in 2018?</h3>
+    <label for="">Australia</label>
+    <input type="radio" name="cup" id="" value="Australia">
+    <label for="">India</label>
+    <input type="radio" name="cup" id="" value="india"><br><br>
+    <label for="">England</label>
+    <input type="radio" name="cup" id="" value="england">
+    <label for="">Africa</label>
+    <input type="radio" name="cup" id="" value="africa"><br><br>
+
+    <button onclick="check()">Submit Answer</button>
+    
+</body>
+<script>
+    var score  = 0;
+    function check(){
+        var tall = document
+        .querySelector('input[name="tall"]:checked').value;
+        if(tall == "burj"){
+            score = score + 1;
+        }
+        var runner = document
+        .querySelector('input[name="runner"]:checked').value;
+        if(runner == "lamont"){
+            score = score + 1;
+        }
+        var planet = document
+        .querySelector('input[name="planet"]:checked').value;
+        if(planet == "jupiter"){
+            score = score + 1;
+        }
+        var google = document
+        .querySelector('input[name="google"]:checked').value;
+        if(google == "larry"){
+            score = score + 1;
+        }
+        var cup = document
+        .querySelector('input[name="cup"]:checked').value;
+        if(cup == "Australia"){
+            score = score + 1;
+        }
+        document.getElementById("score").innerText = 
+        score;
+    }
+</script>
+</html>
